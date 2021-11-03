@@ -4,15 +4,16 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Author firstAuthore = new Author("Жюль Верн");
-        Author secondAuthore = new Author("Даниэль Дефо");
+        Author firstAuthore = new Author("Жюль","Верн");
+        Author secondAuthore = new Author("Даниэль", "Дефо");
 
 
-        Book book = new Book("20 тысяч лье под водой", 1870, firstAuthore.getAuthoreName());
-        Book book2 = new Book("таинственный остров", 1875, firstAuthore.getAuthoreName());
-        Book book3 = new Book("путешествие к центру земли", 1864, firstAuthore.getAuthoreName());
-        Book book4 = new Book("вокруг света за 80 дней", 1872, firstAuthore.getAuthoreName());
-        Book book5 = new Book("Робинзон Крузо", 1719, secondAuthore.getAuthoreName());
+
+        Book book = new Book("20 тысяч лье под водой", 1870, firstAuthore);
+        Book book2 = new Book("таинственный остров", 1875, firstAuthore);
+        Book book3 = new Book("путешествие к центру земли", 1864, firstAuthore);
+        Book book4 = new Book("вокруг света за 80 дней", 1872, firstAuthore);
+        Book book5 = new Book("Робинзон Крузо", 1719, secondAuthore);
         book5.setYearPublishing(1725);
 
 
@@ -26,9 +27,9 @@ public class Main {
 
 
         library.printAllBooks();
-        library.getBook("робинзон Крузо");
+        library.printBook("робинзон Крузо");
         library.setYearPublishing("робинзон Крузо", 1800);
-        library.getBook("робинзон Крузо");
+        library.printBook("робинзон Крузо");
 
 
     }

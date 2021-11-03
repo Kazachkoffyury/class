@@ -3,14 +3,21 @@ package ru.skypro;
 public class Book {
     private final String name;
     private int yearPublishing;
-    private final String authorName;
+    private final Author author;
 
-    public Book(String name, int yearPublishing, String authorName) {
+    public Book(String name, int yearPublishing, Author author ) {
         this.name = name;
         this.yearPublishing = yearPublishing;
-        this.authorName = authorName;
+        this.author= author;
+
 
     }
+
+    public Author getAuthor () {
+        return author;
+    }
+
+
 
     public String getName() {
         return this.name;
@@ -18,10 +25,6 @@ public class Book {
 
     public int getYearPublishing() {
         return this.yearPublishing;
-    }
-
-    public String getAuthorName() {
-        return this.authorName;
     }
 
     public void setYearPublishing(int yearPublishing) {

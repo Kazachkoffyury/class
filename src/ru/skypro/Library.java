@@ -7,23 +7,22 @@ public class Library {
         this.books = new Book[countBook];
     }
 
-    public Book[] addBook(Book book) {
+    public void addBook(Book book) {
         for (int i = 0; i < books.length; i++) {
             if (books[i] == null) {
                 books[i] = book;
-                return books;
+                return;
+
             }
 
-
         }
-        return books;
 
     }
 
-    public void getBook(String name) {
+    public void printBook(String name) {
         for (Book book : books) {
             if (book.getName().equalsIgnoreCase(name)) {
-                System.out.println("book = " + book.getName() + ":" + book.getAuthorName() + ":" + book.getYearPublishing());
+                System.out.println("book = " + book.getName() + ":" + book.getAuthor().getAuthoreName() + ":" + book.getYearPublishing());
                 return;
 
             }
@@ -43,6 +42,7 @@ public class Library {
             }
 
         }
+        System.out.println("книга не найдена!");
 
     }
 
@@ -52,7 +52,7 @@ public class Library {
             if (book == null) {
                 return;
             }
-            System.out.println("book = " + book.getName() + ":" + book.getAuthorName() + ":" + book.getYearPublishing());
+            System.out.println("book = " + book.getName() + ":" + book.getAuthor().getAuthoreName() + ":" + book.getYearPublishing());
 
 
         }
